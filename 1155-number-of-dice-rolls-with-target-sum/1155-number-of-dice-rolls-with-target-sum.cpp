@@ -17,7 +17,6 @@ public:
                     dp2[j] %= (int) 1e9 + 7;
                 }
             }
-            cout << endl;
             dp=dp2;
             dp2=vector<int>(t, 0);
         }

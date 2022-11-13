@@ -2,12 +2,12 @@ class Solution {
 public:
     long long maxAlternatingSum(vector<int>& a) {
         int n=a.size();
-        vector<vector<long long>> dp(n, vector<long long>(2, 0));
-        dp[0][0]=a[0];
+        long long dp0=a[0], dp1=0, t0, t1;
         for (int i=1; i<n; i++) {
-            dp[i][0]=max(dp[i-1][1]+a[i], dp[i-1][0]);
-            dp[i][1]=max(dp[i-1][0]-a[i], dp[i-1][1]);
+            t0=max(dp1+a[i], dp0);
+            t1=max(dp0-a[i], dp1);
+            dp0=t0, dp1=t1;
         }
-        return max(dp[n-1][0], dp[n-1][1]);
+        return max(dp0, dp1);
     }
 };

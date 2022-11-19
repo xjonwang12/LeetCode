@@ -14,8 +14,8 @@ public:
             for (auto x:l) {
                 cout << x << " ";
             }
-            */
             cout << endl;
+            */
             r[dp.size()-1]=dp[dp.size()-1]-dp.size()+1;
             for (int k=dp.size()-2; k>=0; k--) {
                 r[k]=max(r[k+1], dp[k]-k);
@@ -24,8 +24,8 @@ public:
             for (auto x:r) {
                 cout << x << " ";
             }
-            */
             cout << endl;
+            */
             for (int j=0; j<p[0].size(); j++) {
                 temp[j] = max(l[j]-j, r[j]+j) + p[i][j];
             }
@@ -33,8 +33,8 @@ public:
             for (auto x:temp) {
                 cout << x << " ";
             }
-            */
             cout << endl;
+            */
             dp=temp;
         }
         long long m=0;

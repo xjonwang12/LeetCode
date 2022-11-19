@@ -15,13 +15,6 @@ public:
             while (!q.empty() && q.back().second <= t) q.pop_back();
             q.push_back({i, t});
         }
-        /*
-        while (!q.empty()) {
-            cout << q.front().second << " ";
-            q.pop_front();
-        }
-        cout << endl;
-        */
         return q.back().second;
     }
 };

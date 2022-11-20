@@ -17,6 +17,7 @@ public:
             if (v==d) return true;
             if (!visited[v] && dfs(g, visited, v, d)) return true;
         }
+        g[s]={};
         return false;
     }
 };

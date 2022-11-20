@@ -9,7 +9,7 @@ public:
         for (int i=0; i<n; i++) {
             for (int j=0; j<m; j++) {
                 int c=0;
-                dfs(grid, i, j, c);
+                if (!visited[i][j] && grid[i][j]) dfs(grid, i, j, c);
                 b=max(b, c);
             }
         }

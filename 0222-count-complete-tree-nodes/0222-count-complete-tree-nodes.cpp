@@ -31,7 +31,6 @@ public:
             copy=copy->right;
             d++;
         }
-        cout << d << " " << h << endl;
         if (d==h--) c+=l, bs(curr->right, max(1, l/2));
         else bs(curr->left, max(1, l/2));
     }

@@ -19,7 +19,6 @@ public:
     bool dfs(int u) {
         vis[u]=1;
         for (auto v : g[u]) {
-            cout << u << " " << v << endl;
             if (vis[v]==1) return true;
             if (vis[v]!=2 && dfs(v)) return true;
         }

@@ -25,7 +25,6 @@ public:
         l = (curr-> left && curr->left->val == curr->val) ? l : 0;
         r = (curr->right && curr->right->val == curr->val) ? r : 0;
         a=max(a, l+r);
-        cout << 1 + max(l, r) << endl;
         return 1 + max(l, r);
     }
 };

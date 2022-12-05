@@ -8,7 +8,6 @@ public:
         priority_queue<pair<int, int>> q;
         unordered_set<int> vis;
         q.push({0, k});
-        vector<int> d(n+1, -1);
         int m=0;
         while (vis.size() < n && !q.empty()) {
             int w=q.top().first, u=q.top().second;
